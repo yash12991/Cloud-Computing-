@@ -8,11 +8,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: Lab7
+
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup NodeJS
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
